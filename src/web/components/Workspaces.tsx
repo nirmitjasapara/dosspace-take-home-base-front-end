@@ -1,8 +1,9 @@
-import WorkspaceList from './WorkspaceList'
 import '../style/Workspaces.css'
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import ReadMe from './ReadMe'
+import ReadMePage from '../pages/ReadMePage'
+import WorkspacePage from '../pages/WorkspacePage'
+import WorkspaceListPage from '../pages/WorkspaceListPage'
 
 function Workspaces() {
   const navigate = useNavigate()
@@ -14,8 +15,9 @@ function Workspaces() {
       </div>
       <div className="Workspaces__content">
         <Routes>
-          <Route path="/readme" element={<ReadMe />} />
-          <Route path="*" element={<WorkspaceList />} />
+          <Route path="/readme" element={<ReadMePage />} />
+          <Route path="/workspace/:id" element={<WorkspacePage />} />
+          <Route path="*" element={<WorkspaceListPage />} />
         </Routes>
       </div>
     </>

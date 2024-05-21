@@ -1,6 +1,6 @@
 import '../style/ReadMe.css'
 
-export default function ReadMe() {
+export default function ReadMePage() {
   return (
     <div>
       <h2>Doss Take Home Technical Challenge</h2>
